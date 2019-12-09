@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import Spherical_Geometry_Swift
+@testable import SphericalGeometry
 
 final class UtilTests: XCTestCase {
     func testToDegrees() {
