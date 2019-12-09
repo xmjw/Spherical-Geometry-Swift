@@ -6,8 +6,9 @@ A Swift Library for computing cartesian coordinates and spherical coordinates in
 
 ## To Do:
 
+- [x] LatLng protocol
 - [ ] Compute Area
-- [ ] Compute Distance Between
+- [x] Compute Distance Between
 - [ ] Compute Heading
 - [ ] Compute Length
 - [ ] Compute Offset
