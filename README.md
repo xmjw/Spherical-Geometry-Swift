@@ -14,6 +14,6 @@ A Swift Library for computing cartesian coordinates and spherical coordinates in
 - [ ] Compute Signed Area
 - [ ] Interpolation
 - [ ] Analyse bounding areas
-- [ ] Radians / Degrees helpers
+- [x] Radians / Degrees helpers
 
 This is going to take me a while........
