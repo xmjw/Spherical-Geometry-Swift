@@ -8,7 +8,7 @@
 import Foundation
 
 class Heading {
-    private func fmod(angle: Float, start: Float, end: Float) -> Float {
+    private func fmod(angle: Double, start: Double, end: Double) -> Double {
         let adjustedEnd = end - start
         return
             (
@@ -26,9 +26,9 @@ class Heading {
      - Parameter from: LatLng compatible object with the start location.
      - Parameter to: LatLng compatible object with the end location.
      
-     - Returns: Float angle, degress clockwise from North.
+     - Returns: Double angle, degress clockwise from North.
      */
-    func compute(from: LatLng, to: LatLng) -> Float {
+    func compute(from: LatLng, to: LatLng) -> Double {
         let fromLat = Utils.toRadians(angleDegrees: from.lat)
         let toLat = Utils.toRadians(angleDegrees: to.lat)
         let deltaLng = Utils.toRadians(angleDegrees: to.lng) - Utils.toRadians(angleDegrees: from.lng)

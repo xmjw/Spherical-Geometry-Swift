@@ -9,14 +9,14 @@ import Foundation
 @testable import SphericalGeometry
 
 class Coordinate: LatLng {
-    private var _lat: Float
-    private var _lng: Float
+    private var _lat: Double
+    private var _lng: Double
     
-    init(lat: Float, lng: Float) {
+    init(lat: Double, lng: Double) {
         _lat = lat
         _lng = lng
     }
     
-    var lat: Float { get { return _lat } }
-    var lng: Float { get { return _lng } }
+    var lat: Double { get { return _lat } }
+    var lng: Double { get { return _lng } }
 }

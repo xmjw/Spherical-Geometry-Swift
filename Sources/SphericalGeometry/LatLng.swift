@@ -8,6 +8,6 @@
 import Foundation
 
 protocol LatLng {
-    var lat: Float { get }
-    var lng: Float { get }
+    var lat: Double { get }
+    var lng: Double { get }
 }
