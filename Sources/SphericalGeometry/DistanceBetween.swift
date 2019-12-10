@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ComputeDistanceBetween {
+class DistanceBetween {
     private func distance(fromLat: Float, fromLng: Float, toLat: Float, toLng: Float) -> Float {
         return (
             2 *
@@ -22,7 +22,7 @@ class ComputeDistanceBetween {
         )
     }
     
-    func computeDistanceBetween(from: LatLng, to: LatLng, radius: Float = EARTH_RADIUS) -> Float {
+    func compute(from: LatLng, to: LatLng, radius: Float = EARTH_RADIUS) -> Float {
         let fromLat = Utils.toRadians(angleDegrees: from.lat)
         let fromLng = Utils.toRadians(angleDegrees: from.lng)
         let toLat = Utils.toRadians(angleDegrees: to.lat)
