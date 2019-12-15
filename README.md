@@ -11,7 +11,8 @@ A Swift Library for computing cartesian coordinates and spherical coordinates in
 - [x] Compute Distance Between
 - [x] Compute Heading
 - [x] Compute Length
-- [ ] Compute Offset
+- [x] Compute Offset
+- [ ] Compute Origin
 - [ ] Compute Signed Area
 - [ ] Interpolation
 - [ ] Analyse bounding areas
