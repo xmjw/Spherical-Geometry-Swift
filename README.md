@@ -12,10 +12,14 @@ A Swift Library for computing cartesian coordinates and spherical coordinates in
 - [x] Compute Heading
 - [x] Compute Length
 - [x] Compute Offset
-- [ ] Compute Origin
+- [-] Compute Origin
 - [ ] Compute Signed Area
 - [ ] Interpolation
 - [ ] Analyse bounding areas
 - [x] Radians / Degrees helpers
 
 This is going to take me a while........
+
+## Some References:
+
+- See this: https://www.movable-type.co.uk/scripts/latlong.html
