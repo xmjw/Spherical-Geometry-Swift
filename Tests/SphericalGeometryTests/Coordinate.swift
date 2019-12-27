@@ -17,6 +17,12 @@ class Coordinate: LatLng {
         _lng = lng
     }
     
-    var lat: Double { get { return _lat } }
-    var lng: Double { get { return _lng } }
+    var lat: Double {
+        get { return _lat }
+        set { _lat = newValue }
+    }
+    var lng: Double {
+        get { return _lng }
+        set { _lng = newValue }
+    }
 }

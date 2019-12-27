@@ -1,25 +1,12 @@
 # Spherical Geometry Swift
 
-This is roughly based on [spherical-geometry-js](https://github.com/NotWoods/spherical-geometry-js) as inspiration for the features and maths but rewritten to be "swifty".
+Library for moving things around on a sphere. There are three important classes here:
 
-A Swift Library for computing cartesian coordinates and spherical coordinates interchangably. The maths to actually do this is a little over my head (or so it seems from some horribly failed 3D renders...) so I'm going to port the existing maths.
-
-## To Do:
-
-- [x] LatLng protocol
-- [ ] Compute Area
-- [x] Compute Distance Between
-- [x] Compute Heading
-- [x] Compute Length
-- [x] Compute Offset
-- [-] Compute Origin
-- [ ] Compute Signed Area
-- [ ] Interpolation
-- [ ] Analyse bounding areas
-- [x] Radians / Degrees helpers
-
-This is going to take me a while........
+- Calculator - This is a calculator for common movement and distance calculations
+- SphericalPosition - This is an object for representing a position on a sphere
+- CartesianRelator - This is an object for mapping spherical position back to x,y,z coordinates.
 
 ## Some References:
 
-- See this: https://www.movable-type.co.uk/scripts/latlong.html
+- [Maths explanations](https://www.movable-type.co.uk/scripts/latlong.html)
+- Reference Implementation based on some Google Work [spherical-geometry-js](https://github.com/NotWoods/spherical-geometry-js)
