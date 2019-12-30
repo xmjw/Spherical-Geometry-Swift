@@ -1,9 +1,9 @@
 import Foundation
 
-class Calculator {
+public class Calculator {
     private var _radius: Double
     
-    init(radius: Double = EARTH_RADIUS) {
+    public init(radius: Double = EARTH_RADIUS) {
         _radius = radius
     }
     
@@ -28,7 +28,7 @@ class Calculator {
         - Parameter to: end position
         - returns: double - distance in meters.
      */
-    func distanceBetween(from: LatLng, to: LatLng) -> Double {
+    public func distanceBetween(from: LatLng, to: LatLng) -> Double {
         let fromLat = Utils.toRadians(angleDegrees: from.lat)
         let fromLng = Utils.toRadians(angleDegrees: from.lng)
         let toLat = Utils.toRadians(angleDegrees: to.lat)
@@ -58,7 +58,7 @@ class Calculator {
      
      - Returns: Double angle, degress clockwise from North.
      */
-    func headingBetween(from: LatLng, to: LatLng) -> Double {
+    public func headingBetween(from: LatLng, to: LatLng) -> Double {
         let fromLat = Utils.toRadians(angleDegrees: from.lat)
         let toLat = Utils.toRadians(angleDegrees: to.lat)
         let deltaLng = Utils.toRadians(angleDegrees: to.lng) - Utils.toRadians(angleDegrees: from.lng)
@@ -80,7 +80,7 @@ class Calculator {
      - Returns: Double - length of path in meters.
      
      */
-    func lengthOfPath(paths: Array<LatLng>) -> Double {
+    public func lengthOfPath(paths: Array<LatLng>) -> Double {
          var length = Double(0);
          for i in 0..<(paths.count-1) {
              length += distanceBetween(from: paths[i], to: paths[i + 1])
@@ -98,7 +98,7 @@ class Calculator {
 
       - Returns: New Position given the move.
       */
-    func move(position: LatLng, heading: Double, distance: Double) -> (Double, Double) {
+    public func move(position: LatLng, heading: Double, distance: Double) -> (Double, Double) {
 
         let distanceOverRadius = distance / _radius
         let headingRadians = Utils.toRadians(angleDegrees: heading)

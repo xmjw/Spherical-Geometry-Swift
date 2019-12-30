@@ -1,4 +1,4 @@
-enum SphericalError: Error {
+public enum SphericalError: Error {
     case originCalculationError
     case notImplemented
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-class CartesianRelator {
+public class CartesianRelator {
     private var _x: Double
     private var _y: Double
     private var _z: Double
@@ -13,7 +13,7 @@ class CartesianRelator {
     - Paremeter parentZ: Z coordinate of parent body.
            
      */
-    init(parentX: Double = 0, parentY: Double = 0, parentZ: Double = 0, parentRadius: Double) {
+    public init(parentX: Double = 0, parentY: Double = 0, parentZ: Double = 0, parentRadius: Double) {
         _x = parentX
         _y = parentY
         _z = parentZ
@@ -27,7 +27,7 @@ class CartesianRelator {
      
     - Returns Double, Double, Double: X, Y, Z position of the object, as offsets from parent position.
      */
-    func positionCartesian(polarPosition: LatLng) -> (Double, Double, Double) {
+    public func positionCartesian(polarPosition: LatLng) -> (Double, Double, Double) {
         // Has to be in radians, I suspect this will cause issues later, because
         // we're not making this clear in the API.
         let φ = Utils.toRadians(angleDegrees: polarPosition.lat)
@@ -48,7 +48,7 @@ class CartesianRelator {
      
     - Returns Double, Double, Double: X, Y, Z position of the object
      */
-    func absPositionCartesian(polarPosition: LatLng) -> (Double, Double, Double) {
+    public func absPositionCartesian(polarPosition: LatLng) -> (Double, Double, Double) {
         let (x, y, z) = positionCartesian(polarPosition: polarPosition)
         return (_x + x, _y + y, _z + z)
     }
