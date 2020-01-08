@@ -54,4 +54,13 @@ final class CalculatorTests: XCTestCase {
         XCTAssertEqual(lat, actualMidpoint.lat, accuracy: 0.001)
         XCTAssertEqual(lng, actualMidpoint.lng, accuracy: 0.001)
     }
+    
+    func testAntipodes() {
+        let calculator = Calculator.init()
+        XCTAssertEqual(calculator.antipode(degrees: 312), 132)
+        XCTAssertEqual(calculator.antipode(degrees: 76), 256)
+        XCTAssertEqual(calculator.antipode(degrees: 180), 360)
+        XCTAssertEqual(calculator.antipode(degrees: 0), 180)
+        XCTAssertEqual(calculator.antipode(degrees: 360), 180)
+    }
 }

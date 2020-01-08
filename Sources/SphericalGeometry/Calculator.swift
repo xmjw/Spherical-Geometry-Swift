@@ -147,4 +147,11 @@ public class Calculator {
         return (newLat, newLng)
     }
 
+    public func antipode(degrees: Double) -> Double {
+        if degrees > 180 {
+            return degrees - 180
+        }
+        return degrees + 180
+    }
+    
 }
