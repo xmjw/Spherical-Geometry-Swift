@@ -72,6 +72,30 @@ public class Calculator {
         let angle = Utils.toDegrees(radians: radiansAngle)
         return fmod(angle: angle, start: -180, end: 180);
     }
+
+    /**
+        - Find the midpoint between to locations for a great-circle trajectory. Recursively call this to find all points on a path.
+
+        - Parameter from: Starting location
+        - Parameter to: End point.
+
+        - Returns (double, doucle): The new Lat and Long position that represents the midpoint.
+     */
+    public func midpoint(from: LatLng, to: LatLng) -> (Double, Double) {
+        let latitudeSourceRads = Utils.toRadians(angleDegrees: from.lat)
+        let longitudeSourceRads = Utils.toRadians(angleDegrees: from.lng)
+
+        let latitudeDestinationRads = Utils.toRadians(angleDegrees: to.lat)
+        let longitudeDestinationRads = Utils.toRadians(angleDegrees: to.lng)
+
+        let Bx = cos(latitudeDestinationRads) * cos(longitudeDestinationRads - longitudeSourceRads)
+        let By = cos(latitudeDestinationRads) * sin(longitudeDestinationRads - longitudeSourceRads)
+
+        let midLatitude = atan2(sin(latitudeSourceRads) + sin(latitudeDestinationRads), sqrt((cos(latitudeSourceRads) + Bx) * (cos(latitudeSourceRads) + Bx) + By * By))
+        let midLongitude = longitudeSourceRads + atan2(By, cos(latitudeSourceRads) + Bx)
+
+        return (Utils.toDegrees(radians: midLatitude), Utils.toDegrees(radians: midLongitude))
+    }
     
     /**
     Calculates the length given an array of coordinates on the sphere.
@@ -87,7 +111,6 @@ public class Calculator {
          }
          return length
      }
-    
     
     /**
       - Computes the new position given a heading and distance.
